@@ -20,37 +20,33 @@
     <title>{% block title %}Home{% endblock %}</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbar"
-      >
-        <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light green-bg">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+          <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbar">
-        <div class="navbar-nav">
-          {% if user.is_authenticated %}
-          <a class="nav-item nav-link" id="home" href="/home">Home</a>
-          <a class="nav-item nav-link" id="aboutUs" href="/aboutUs">About Us</a>
-          <a class="nav-item nav-link" id="services" href="/services">Services</a>
-          <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
-          {% elif request.path == '/login' %}
-          <a class="nav-item nav-link" id="home" href="/home">Home</a>
-          <a class="nav-item nav-link" id="aboutUs" href="/aboutUs">About Us</a>
-          <a class="nav-item nav-link" id="services" href="/services">Services</a>
-          {% else %}
-          <a class="nav-item nav-link" id="home" href="/home">Home</a>
-          <a class="nav-item nav-link" id="aboutUs" href="/aboutUs">About Us</a>
-          <a class="nav-item nav-link" id="services" href="/services">Services</a>
-          <a class="nav-item nav-link" id="login" href="/login">Login</a>
-          <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
-          {% endif %}
-        </div>
+      <div class="nav__logo">EM<span>-HEALTH</span></div>
+      <div class="collapse navbar-collapse justify-content-center" id="navbar">
+          <div class="navbar-nav">
+              {% if user.is_authenticated %}
+              <a class="nav-item nav-link" id="home" href="/home">Home</a>
+              <a class="nav-item nav-link" id="aboutUs" href="/aboutUs">About Us</a>
+              <a class="nav-item nav-link" id="services" href="/services">Services</a>
+              <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
+              {% elif request.path == '/login' %}
+              <a class="nav-item nav-link" id="home" href="/home">Home</a>
+              <a class="nav-item nav-link" id="aboutUs" href="/aboutUs">About Us</a>
+              <a class="nav-item nav-link" id="services" href="/services">Services</a>
+              {% else %}
+              <a class="nav-item nav-link" id="home" href="/home">Home</a>
+              <a class="nav-item nav-link" id="aboutUs" href="/aboutUs">About Us</a>
+              <a class="nav-item nav-link" id="services" href="/services">Services</a>
+              <a class="nav-item nav-link" id="login" href="/login">Login</a>
+              <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
+              {% endif %}
+          </div>
       </div>
-    </nav>
-
+  </nav>
+  
     {% with messages = get_flashed_messages(with_categories=true) %} {% if
     messages %} {% for category, message in messages %} {% if category ==
     'error' %}
@@ -69,7 +65,7 @@
     </div>
     {% endif %} {% endfor %} {% endif %} {% endwith %}
 
-    <div class="container">{% block content %} {% endblock %}</div>
+    <div class="background-wrapper">{% block content %}background-wrapper {% endblock %}</div>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -86,17 +82,6 @@
       crossorigin="anonymous"
     ></script>
 
-{% block javascript %}
-    <script type="text/javascript">
-      function deleteNote(noteId) {
-  fetch("/delete-note", {
-    method: "POST",
-    body: JSON.stringify({ noteId: noteId }),
-  }).then((_res) => {
-    window.location.href = "/";
-  });
-  }
-</script>
-{% endblock %}
+
   </body>
 </html>

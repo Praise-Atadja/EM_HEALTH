@@ -9,6 +9,7 @@
   --text-light: #767268;
   --white: #ffffff;
   --max-width: 1200px;
+  --custom-green: #3ec588;
 }
 
 * {
@@ -53,7 +54,21 @@ a {
 
 body {
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding:0;
 }
+
+/* styles.css */
+.background-wrapper {
+  background-image: url('your-background-image.jpg');
+  background-size: cover;
+  background-position: center center;
+  height: 100vh; /* Occupies full viewport height */
+  /* Other styles for your background */
+}
+
+ 
+
 
 header {
   background-image: linear-gradient(
@@ -61,36 +76,24 @@ header {
       rgba(18, 172, 142, 0.9),
       rgba(18, 172, 142, 0.7)
     ),
-    url("assets/header.jpg");
+    url("assets/header.jpg") ;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.nav__container {
-  padding: 2rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+
 
 .nav__logo {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--white);
+  color: var(-- #3ec588);
 }
 
 .nav__logo span {
-  color: var(--secondary-color);
+  color: var(white);
 }
 
-.nav__links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-}
 
 .link a {
   padding: 0.5rem;
@@ -103,9 +106,11 @@ header {
 
 .header__container {
   display: flex;
-  align-items: center;
+  align-items: center; /* Use a valid value for align-items */
   gap: 5rem;
+  width: 100%; /* Make the container fill the screen width */
 }
+
 
 .header__container h1 {
   margin-bottom: 1rem;
