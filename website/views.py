@@ -15,3 +15,7 @@ def home():
 @views.route('/dashboard', methods=['GET', 'POST'])
 def dashboard():
        return render_template("dashboard.html", user=current_user)
+
+@views.route('/services', methods=['GET', 'POST'])
+def dashboard():
+       return render_template("services.html", user=current_user)
