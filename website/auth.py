@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, flash, redirect, url_for
+from flask import Blueprint, render_template, request, flash, redirect, url_for, jsonify
 from .models import User
 from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
@@ -78,3 +78,8 @@ def sign_up():
 def settings():
     if request.method == 'GET':
         return redirect(url_for('views.settings'))
+    
+@auth.route('/profile', methods=['GET','POST'])
+def profile():
+    if request.method == 'GET':
+        return redirect(url_for('views.profile'))
