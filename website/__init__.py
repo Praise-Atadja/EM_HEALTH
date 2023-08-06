@@ -5,11 +5,7 @@ from flask_login import LoginManager
 
 db = SQLAlchemy()
 DB_NAME = "database.db"
-resources = {
-    'resource1': {'details': 'Details for Resource 1'},
-    'resource2': {'details': 'Details for Resource 2'},
-    # Add more resources here
-}
+
 
 
 def create_app():
