@@ -395,7 +395,7 @@ body {
 	color: var(--orange);
 }
 #content main .box-info li .text h3 {
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 600;
 	color: var(--dark);
 }
