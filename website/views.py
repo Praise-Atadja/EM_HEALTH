@@ -21,3 +21,7 @@ def dashboard():
 def settings():
            return render_template('settings.html',  user=current_user)
 
+@views.route('/profile', methods=['GET','POST'])
+def profile():
+           return render_template('profile.html',  user=current_user)
+
