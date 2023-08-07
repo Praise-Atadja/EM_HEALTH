@@ -21,7 +21,7 @@
 .section__container {
   max-width: var(--max-width);
   margin: auto;
-  padding: 5rem 1rem;
+  padding: 10rem 1rem;
 }
 
 .section__header {
@@ -58,25 +58,24 @@ body {
   padding:0;
 }
 
-/* styles.css */
+/* home.css */
 .background-wrapper {
-  background-image: url('your-background-image.jpg');
+  background-image: url('');
   background-size: cover;
   background-position: center center;
   height: 100vh; /* Occupies full viewport height */
   /* Other styles for your background */
 }
 
- 
 
 
 header {
   background-image: linear-gradient(
       to right,
-      rgba(18, 172, 142, 0.9),
-      rgba(18, 172, 142, 0.7)
+      rgba(13, 101, 84, 0.9),
+      rgba(16, 101, 84, 0.7)
     ),
-    url("assets/header.jpg") ;
+    url("../static/assets/header.jpg") ;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -85,9 +84,9 @@ header {
 
 
 .nav__logo {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
-  color: var(-- #3ec588);
+  color: var(--primary-color#3ec588);
 }
 
 .nav__logo span {
@@ -111,93 +110,87 @@ header {
   width: 100%; /* Make the container fill the screen width */
 }
 
-
-.header__container h1 {
+.header__container p {
   margin-bottom: 1rem;
+ 
+  margin-right: 20%;
+  margin-left: 20%;
+  max-width: 90%;
+  position: justify;
+  color: var(--primary-color-light);
+  text-align: center; 
+  
+}
+
+.header__content h2 {
+  text-align: center; /* Center the text horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20%;
+  margin-left: 20%;
+  margin-bottom: 2rem;
+  margin-top: -5rem;
   max-width: 800px;
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 4rem;
   color: var(--white);
+  height: 20vh;
 }
 
-.header__container p {
+
+
+.service__header h2 {
+  text-align: center; /* Center the text horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-right: 20%;
+  margin-left: 20%;
   margin-bottom: 2rem;
-  max-width: 600px;
-  color: var(--primary-color-light);
+  margin-top: -5rem;
+  max-width: 800px;
+  font-size: 3rem;
+  line-height: 4rem;
+
 }
 
-.header__form {
-  width: 100%;
-  max-width: 350px;
+
+.section__container.service__container {
+  background-image: linear-gradient(
+    to right,
+    rgba(137, 177, 169, 0.9),
+    rgba(176, 191, 188, 0.9)
+  ), url("../static/assets/services.jpg") ;
+    
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.header__form form {
-  display: grid;
-  gap: 1rem;
-  padding: 2rem;
-  background-color: var(--white);
-  border-radius: 10px;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-}
-
-.header__form input {
-  padding: 1rem;
-  outline: none;
-  border: none;
-  font-size: 1rem;
-  color: var(--primary-color);
-  background-color: var(--primary-color-light);
-  border-radius: 5px;
-}
-
-.header__form input::placeholder {
-  color: var(--primary-color);
-}
-
-.form__btn {
-  background-color: var(--primary-color);
-  transition: 0.3s;
-}
-
-.form__btn:hover {
-  background-color: var(--primary-color-dark);
-}
-
-.header__form h4 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
-}
 
 .service__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
+  
 }
 
 .service__header__content p {
   max-width: 600px;
   color: var(--text-light);
+  margin-bottom: 1rem;
+  margin-right: 20%;
+  margin-left: 20%;
+  max-width: 90%;
+  position: justify;
+  color: var(--text-dark);
+  text-align: center; 
 }
 
-.service__btn {
-  padding: 0.75rem 1rem;
-  outline: none;
-  font-size: 1rem;
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-  background-color: transparent;
-  border-radius: 5px;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.service__btn:hover {
-  color: var(--white);
-  background-color: var(--primary-color);
-}
 
 .service__grid {
   margin-top: 4rem;
