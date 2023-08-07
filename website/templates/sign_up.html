@@ -1,49 +1,168 @@
 {% extends "base.html" %} {% block title %}Sign Up{% endblock %}
 
 {% block content %}
-<form  method="POST">
-    <h3 align="center">Sign Up</h3>
-    <div class="form-group">
-        <label for="email">Email Address</label>
-        <input 
-        type="email" 
-        class="form-control" 
-        id="email"
-        name="email"
-        placeholder="Enter email"
-        />
+
+
+<style>
+    *:before,
+    *:after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+   
+    margin: 0;
+    height: 100vh; /* Set the body height to full viewport height */
+    overflow: hidden; /* Prevent any scrollbars */
+    background-image: linear-gradient(
+        to right,
+        rgba(114, 149, 142, 0.9),
+        rgba(16, 101, 84, 0.7)
+    ),
+    url("../static/assets/signup.avif");
+    
+}
+
+body.background-wrapper {
+  background-image: url('');
+  background-size: cover;
+  background-position: center center;
+  height: 100vh; /* Occupies full viewport height */
+  /* Other styles for your background */
+}
+
+
+    .shape:first-child {
+        background: linear-gradient(
+            #1845ad,
+            #23a2f6
+        );
+        left: -80px;
+        top: -80px;
+    }
+    .shape:last-child {
+        background: linear-gradient(
+            to right,
+            #ff512f,
+            #f09819
+        );
+        right: -30px;
+        bottom: -80px;
+    }
+    form {
+        height: 550px;
+        width: 400px;
+        background-color: rgba(244, 224, 224, 0.13);
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 90%; /* Adjust this value */
+        left: 50%;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+        padding: 50px 35px;
+    }
+    form * {
+        font-family: 'Poppins', sans-serif;
+        color: #ffffff;
+        letter-spacing: 0.5px;
+        outline: none;
+        border: none;
+    }
+    form h3 {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 42px;
+        text-align: center;
+    }
+    label {
+        display: block;
+        margin-top: 30px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    input {
+        display: block;
+        height: 50px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.07);
+        border-radius: 3px;
+        padding: 0 10px;
+        margin-top: 8px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    ::placeholder {
+        color: #e5e5e5;
+    }
+    button {
+        margin-top: 20px;
+        margin-left: 40px;
+        width: 80%;
+        background-color: #ffffff;
+        color: #080710;
+        padding: 15px 0;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+        
+    }
+</style>
+
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
     </div>
-    <div class="form-group">
-        <label for="firstName">First Name</label>
-        <input 
-        type="text"
-        class="form-control" 
-        id="firstName"
-        name="firstName"
-        placeholder="Enter first name"
-        />
-    </div>
-    <div class="form-group">
-        <label for="password1">Password (Confirm)</label>
-        <input 
-        type="password"
-        class="form-control" 
-        id="password1"
-        name="password1"
-        placeholder="Enter password"
-        />
-    </div>
-    <div class="form-group">
-        <label for="password2">Password</label>
-        <input 
-        type="password"
-        class="form-control" 
-        id="password2"
-        name="password2"
-        placeholder="Comfirm password"
-        />
-    </div>
-    <br />
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+    <form method="POST">
+        <h3>Sign Up</h3>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input 
+            type="email" 
+            class="form-control" 
+            id="email"
+            name="email"
+            placeholder="Enter email"
+            />
+        </div>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input 
+            type="text"
+            class="form-control" 
+            id="firstName"
+            name="firstName"
+            placeholder="Enter first name"
+            />
+        </div>
+        <div class="form-group">
+            <label for="password1">Password (Confirm)</label>
+            <input 
+            type="password"
+            class="form-control" 
+            id="password1"
+            name="password1"
+            placeholder="Enter password"
+            />
+        </div>
+        <div class="form-group">
+            <label for="password2">Password</label>
+            <input 
+            type="password"
+            class="form-control" 
+            id="password2"
+            name="password2"
+            placeholder="Comfirm password"
+            />
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+
 {% endblock %}
