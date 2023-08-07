@@ -1,0 +1,102 @@
+{% extends "base.html" %} {% block title %}Health and Professional Support{% endblock %}
+
+{% block content %}
+
+
+
+<!-- My CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='support.css') }}">
+
+
+  <body>
+   
+    <section class="section__container doctors__container">
+      <div class="doctors__header">
+        <div class="doctors__header__content">
+          <h2 class="section__header">Connect with our Special Doctors</h2>
+          <p>
+            We are proud to have a diverse team of mental healthcare professionals, each specializing in their respective fields, ready to address your individual needs.
+          </p>
+        </div>
+        <div class="doctors__nav">
+          <span><i class="ri-arrow-left-line"></i></span>
+          <span><i class="ri-arrow-right-line"></i></span>
+        </div>
+      </div>
+      <div class="doctors__grid">
+        <div class="doctors__card">
+          <div class="doctors__card__image">
+            <img src="../static/assets/neurologist.avif" alt="doctor" />
+            <div class="doctors__socials">
+              <span><i class="ri-instagram-line"></i></span>
+              <span><i class="ri-facebook-fill"></i></span>
+              <span><i class="ri-heart-fill"></i></span>
+              <span><i class="ri-twitter-fill"></i></span>
+            </div>
+          </div>
+          <p>Neurologist</p>
+          <a href="https://calendly.com/orlyaseye">Book Appointment</a>
+        </div>
+        <div class="doctors__card">
+          <div class="doctors__card__image">
+            <img src="../static/assets/psychiatrist.avif" alt="doctor" />
+            <div class="doctors__socials">
+              <span><i class="ri-instagram-line"></i></span>
+              <span><i class="ri-facebook-fill"></i></span>
+              <span><i class="ri-heart-fill"></i></span>
+              <span><i class="ri-twitter-fill"></i></span>
+            </div>
+          </div>
+          <p>Psychiatrist</p>
+          <a href="https://calendly.com/orlyaseye">Book Appointment</a>
+
+        </div>
+        <div class="doctors__card">
+          <div class="doctors__card__image">
+            <img src="../static/assets/psychologist.jpg" alt="doctor" />
+            <div class="doctors__socials">
+              <span><i class="ri-instagram-line"></i></span>
+              <span><i class="ri-facebook-fill"></i></span>
+              <span><i class="ri-heart-fill"></i></span>
+              <span><i class="ri-twitter-fill"></i></span>
+            </div>
+          </div>
+          <p>Psychologist</p>
+          <a href="https://calendly.com/orlyaseye">Book Appointment</a>
+
+        </div>
+        <div class="doctors__card">
+          <div class="doctors__card__image">
+            <img src="../static/assets/general doctor.jpg" alt="doctor" />
+            <div class="doctors__socials">
+              <span><i class="ri-instagram-line"></i></span>
+              <span><i class="ri-facebook-fill"></i></span>
+              <span><i class="ri-heart-fill"></i></span>
+              <span><i class="ri-twitter-fill"></i></span>
+            </div>
+          </div>
+          <p>General Doctor</p>
+          <a href="https://calendly.com/orlyaseye">Book Appointment</a>
+
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      
+      <div class="footer__bar">
+        <div class="footer__bar__content">
+          <p>Copyright © 2023 Aseye. All rights reserved.</p>
+          <div class="footer__socials">
+            <span><i class="ri-instagram-line"></i></span>
+            <span><i class="ri-facebook-fill"></i></span>
+            <span><i class="ri-heart-fill"></i></span>
+            <span><i class="ri-twitter-fill"></i></span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+{% endblock %}
