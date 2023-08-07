@@ -83,3 +83,9 @@ def settings():
 def profile():
     if request.method == 'GET':
         return redirect(url_for('views.profile'))
+    
+
+@auth.route('/support', methods=['GET','POST'])
+def support():
+    if request.method == 'GET':
+        return redirect(url_for('views.support'))
