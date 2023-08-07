@@ -58,6 +58,20 @@ body {
   padding:0;
 }
 
+/* Hide the vertical scrollbar */
+body::-webkit-scrollbar {
+  width: 0; /* Adjust the width as needed */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+/* Hide the horizontal scrollbar (optional) */
+body::-webkit-scrollbar-horizontal {
+  display: none;
+}
+
 /* home.css */
 .background-wrapper {
   background-image: url('');
