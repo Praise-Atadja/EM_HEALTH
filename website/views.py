@@ -25,5 +25,10 @@ def settings():
 def profile():
            return render_template('profile.html',  user=current_user)
 
+@views.route('/support', methods=['GET','POST'])
+def support():
+           return render_template('support.html',  user=current_user)
+
+
 
 
