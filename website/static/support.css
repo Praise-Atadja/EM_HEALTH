@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+
+body{
+  background-color: rgb(200, 217, 200);
+}
+
+.doctors__header {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-left: 20%;
+  margin-bottom: 2rem;
+  margin-top: -8rem;
+}
+
+.doctors__header__content p {
+  max-width: 600px;
+  color: var(--text-light);
+}
+
+.doctors__grid {
+  margin-top: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Display 2 items in a row */
+  grid-template-rows: auto auto; /* Define 2 rows */
+  gap: 1rem;
+}
+
+
+.doctors__card {
+  text-align: center;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Adjust the box-shadow values as needed */
+  border-radius: 8px; /* Adjust the border-radius value as needed */
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 2rem; /* Adjust the margin-top value as needed */
+  margin-bottom: 1rem; /* Adjust the margin-bottom value as needed */
+  width: 350px; /* Adjust the width value as needed */
+  height: 350px; /* Adjust the height value as needed */
+  margin-left: 3rem;
+  margin-right: 5rem;
+  
+}
+
+
+.doctors__card__image {
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.doctors__card h4 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.doctors__card p {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.footer {
+  background-color: var(--primary-color-light);
+}
+
+
+.footer__bar {
+  background-color: var(--primary-color);
+}
+
+.footer__bar__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer__bar__content p {
+  font-size: 0.8rem;
+  color: var(--white);
+}
+
+
+@media (width < 900px) {
+  
+  .doctors__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+  .header__container {
+    flex-direction: column;
+  }
+
+@media (width < 600px) {
+
+  .doctors__header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .doctors__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer__bar__content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
